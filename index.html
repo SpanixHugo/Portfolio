@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.1.1-web/css/all.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>MY PORTFOLIO</title>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="" alt="" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">My Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web developer</p>
+                <h1>Hi, i'm <span>Eze Ugochukwu</span> <br> from Nigeria</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ABOUT -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col1">
+                    <img src="./img/dec pic2.jpg" alt="">
+                </div>
+                <div class="col2">
+                    <h1>About Me</h1>
+                    <p>I'm Eze Ugochukwu, a skilled web developer proficient in HTML, CSS, JavaScript, PHP, and Python.
+                        With an eye for design and a knack for interactivity, I craft responsive, secure websites and
+                        applications. Let's collaborate and bring your digital vision to life!</p>
+
+                    <div class="tab-titles">
+                        <div class="tab-links active-link" onclick="opentab('skills')">Skills</div>
+                        <div class="tab-links" onclick="opentab('experience')">Experience</div>
+                        <div class="tab-links" onclick="opentab('education')">Education</div>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML, CSS & JavaScript <br></span>Proficient in creating the structure and layout
+                                of web pages using HTML5, Skilled in styling and designing websites with CSS3, including
+                                responsive design techniques, Strong proficiency in JavaScript for adding interactivity
+                                and dynamic functionality to websites.
+                            </li>
+                            <li><span>Back-End Development <br></span> Competence in building server-side logic,
+                                databases, and APIs for web applications.
+                            </li>
+                            <li><span>Database Management <br></span>Knowledge of SQL and NoSQL databases like MySQL,
+                                PostgreSQL, MongoDB, or Firebase.</li>
+                            <li><span>Debugging and Troubleshooting<br></span>Strong problem-solving skills for
+                                identifying and resolving web development issues.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Web Developer | XYZ Web Solutions  August 2022 - Present <br></span>
+                                <ul>
+                                    <li>Developed customized websites for diverse clients using HTML, CSS, JavaScript, PHP,
+                                        and
+                                        Python.</li>
+                                    <li>Improved user engagement by creating responsive, visually appealing designs.
+                                    </li>
+                                    <li>Enhanced website functionality through API integrations and secure back-end
+                                        development.
+                                    </li>
+                                   
+                                </ul>
+                            </li>
+                            <li>
+                                <span>Junior Web Developer August 2022 - current<br></span>
+                                <ul>
+                                    <li>Assisted senior developers with Python, Django, and front-end development.</li>
+                                    <li>Contributed to database design, troubleshooting, and cross-functional collaboration.</li>
+                                </ul>
+                            </li>
+                            <li><span>Freelance Web Developer <br></span>
+                                <ul>
+                                    <li>Designed and developed personalized, responsive websites for small businesses.
+                                    </li>
+                                    <li>
+                                        Managed client relationships and delivered projects on time.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - 2023 <br></span> Designing Web/App interfaces Training at APTECH</li>
+                            <li><span>2016 - 2022 <br></span> Schooled at Command Secondary School Abakaliki</li>
+                            <li><span>2012 - 2016 <br></span> Schooled at Hill View Nursery and Primary School
+                                Independence Layout Enugu</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div data-aos="fade-up" data-aos-deley="1000" data-aos-duration="2000">
+                    <i class="fas fa-code"></i>
+                    <h2>Website Development</h2>
+                    <p>Create custom websites from scratch, tailored to clients' unique needs and branding.</p>
+                    <!-- <a href="#">Learn More</a> -->
+                </div>
+                <div data-aos="fade-up" data-aos-deley="1000" data-aos-duration="2000">
+                    <i class="fa-brands fa-css3"></i>
+                    <h2>Front-End Development</h2>
+                    <p> Design and implement user-friendly interfaces using HTML, CSS, and JavaScript. Create
+                        professional portfolios for individuals or businesses to showcase their work and services.</p>
+                    <!-- <a href="#">Learn More</a> -->
+                </div>
+                <div data-aos="fade-up" data-aos-deley="1000" data-aos-duration="2000">
+                    <i class="fa-solid fa-code-pull-request"></i>
+                    <h2>Back-End Development</h2>
+                    <p>Build server-side applications, databases, and APIs using PHP, Python, or other backend
+                        technologies.</p>
+                    <!-- <a href="#">Learn More</a> -->
+                </div>
+
+            </div>
+            <div class="services-list">
+                <div data-aos="fade-up" data-aos-deley="1000" data-aos-duration="2000">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <h2>E-Commerce Solutions</h2>
+                    <p>Develop online stores with payment gateways, product catalogs, and secure transactions.</p>
+                    <!-- <a href="#">Learn More</a> -->
+                </div>
+                <div data-aos="fade-up" data-aos-deley="1000" data-aos-duration="2000">
+                    <i class="fa-brands fa-searchengin"></i>
+                    <h2>SEO Optimization</h2>
+                    <p>Improve website visibility with on-page and off-page SEO techniques.</p>
+                    <!-- <a href="#">Learn More</a> -->
+                </div>
+                <div data-aos="fade-up" data-aos-deley="1000" data-aos-duration="2000">
+                    <i class="fab fa-app-store"></i>
+                    <h2>Web Hosting and Domain Setup</h2>
+                    <p>Assist clients in selecting suitable hosting and domain options, and set up their online
+                        presence.</p>
+                    <!-- <a href="#">Learn More</a> -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- PORTFOLIO -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work" data-aos="fade-up" data-aos-deley="1000" data-aos-duration="2000">
+                    <img src="./img/personal-portfolio-img/images/work-1.png" alt="">
+                    <div class="layer">
+                        <h3>A Drawing Board</h3>
+                        <p>A drawing board created with HTML, CSS and JavaScript.</p>
+                        <a href="https://canvas-drawing-board-rho.vercel.app"><i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work" data-aos="fade-up" data-aos-deley="1000" data-aos-duration="2000">
+                    <img src="./img/personal-portfolio-img/images/work-2.png" alt="">
+                    <div class="layer">
+                        <h3>Social Web App</h3>
+                        <p>The app connects you to the talented people around the world. Download it from play store.
+                        </p>
+                        <a href=""><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work" data-aos="fade-up" data-aos-deley="1000" data-aos-duration="2000">
+                    <img src="./img/personal-portfolio-img/images/work-3.png" alt="">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>The app connects you to the talented people around the world. Download it from play store.
+                        </p>
+                        <a href="https://github.com/SpanixHugo/Social.git"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-envelope"></i><input class="email" type="text" readonly
+                            value="ezedaniel1223@gmail.com"></p>
+                    <p><i class="fas fa-phone-square-alt"></i> +234 704 254 4797 </p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61551099513477&mibextid=avESrC"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href=" https://twitter.com/SpanixHugo?t=COOFlk3QMw3mJfzuwcsgYw&s=08 "><i
+                                class="fab fa-twitter-square"></i></a>
+                        <a href="https://www.instagram.com/spanix_hugo?r=nametag "><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/eze-daniel-646073255"><i class="fab fa-linkedin"></i></a>
+                        <!-- <a href=""><i class="fab fa-facebook"></i></a> -->
+                    </div>
+                    <!-- <a href="img/7006585_EZE_SomtochukwuChinedu_C000175C_Letter_of_Offer.pdf" download="" class="btn btn2">Download CV</a> -->
+                </div>
+                <div class="contact-right">
+                    <form action="" name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required data-aos="fade-up"
+                            data-aos-deley="1000" data-aos-duration="2000">
+                        <input type="email" name="Email" placeholder="Your Email" required data-aos="fade-up"
+                            data-aos-deley="1000" data-aos-duration="2000">
+                        <textarea name="Message" rows="6" placeholder="Your message" data-aos="fade-up"
+                            data-aos-deley="1000" data-aos-duration="2000"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; Eze Ugochukwu 2022. <i class="fas fa-heart"></i> All right reserverd</p>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init()
+    </script>
+    <script src="./js/index.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby1-xD6fB1nApVa99lzs86qbVVI0SvuVRCs1biG-x6p-YX5G7FLoN_od1tvHGcNVUFL/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>
