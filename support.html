@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support Rev Fr Anthony’s Sacred Ministry</title>
+    <link rel="stylesheet" href="/css/support.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet">
+
+    <!-- Lucide icons (pure JS, no React) -->
+    <!-- <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script> -->
+    <!-- <script defer src="script.js"></script> -->
+</head>
+
+<body>
+    <div class="page">
+
+        <!-- Hero -->
+        <section class="hero">
+            <h1>Support Our Sacred Mission</h1>
+            <p>Your generosity sustains our ministry, helps us spread the Gospel, support education, and uplift the less
+                privileged. Every contribution matters.</p>
+            <a href="index.html" class="btn-home"><i class="fas fa-arrow-left"></i> Go Back to Home</a>
+        </section>
+
+        <!-- Mission -->
+        <section class="mission">
+            <h2>Our Mission</h2>
+            <div class="mission-content">
+                <div class="mission-text">
+                    <p>For over 15 years, Rev. Dr. Anthony Ezekwu has dedicated his life to serving communities through
+                        spiritual guidance, counseling, and faith-based education. Your support enables us to:</p>
+                    <p>• Provide free counseling services to those in need</p>
+                    <p>• Develop and distribute spiritual resources</p>
+                    <p>• Support community outreach programs</p>
+                    <p>• Create educational materials for churches and schools</p>
+                    <p>• Maintain our online platforms that reach thousands globally</p>
+                    <p>Every donation, regardless of size, makes a significant impact on our ability to serve.</p>
+                </div>
+                <div class="mission-image">
+                    <i class="fas fa-hands-helping" style="font-size:3rem;"></i>
+                </div>
+            </div>
+        </section>
+
+        <div style="display: none;" id="impact-grid" class="grid impact-grid"><!-- filled by JS --></div>
+
+        <!-- Donation Form -->
+        <section class="section mission">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Make Your Donation</h2>
+                    <p>Choose how you'd like to support Rev Fr Anthony's ministry. Every gift makes a lasting
+                        difference.</p>
+                </div>
+                <!-- Donation Form -->
+                <section class="section">
+                    <div class="container">
+
+                        <!-- ✅ FORM START -->
+                        <form id="donation-form">
+                            <div class="grid donate-grid">
+                                <!-- Categories -->
+                                <aside>
+                                    <h3 class="subhead">Select Ministry Area</h3>
+                                    <div id="category-list" class="vstack-8"><!-- filled by JS --></div>
+                                </aside>
+
+                                <!-- Amount & Details -->
+                                <div>
+                                    <!-- Tabs -->
+                                    <div class="tabs">
+                                        <div class="tabs-list">
+                                            <button type="button" class="tabs-trigger is-active" data-tab="one-time">
+                                                One-Time Gift
+                                            </button>
+                                            <button type="button" class="tabs-trigger" data-tab="recurring">
+                                                Monthly Giving
+                                            </button>
+                                        </div>
+
+                                        <!-- One-time -->
+                                        <div class="tabs-content is-active" data-content="one-time">
+                                            <h3 class="subhead">Select Amount</h3>
+                                            <div id="one-time-quick" class="grid quick-grid"><!-- filled by JS --></div>
+
+                                            <div style="margin-top: 1rem;" class="field">
+                                                <input id="custom-amount" type="number" inputmode="decimal"
+                                                    placeholder="Enter custom amount" class="input input-lg" />
+                                            </div>
+
+                                            <div id="impact-note" class="note hidden">
+                                                <div class="note-head">
+                                                    <i data-lucide="target" class="icon gold"></i>
+                                                    <span>Your Impact:</span>
+                                                </div>
+                                                <p id="impact-text"></p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Recurring -->
+                                        <div class="tabs-content" data-content="recurring">
+                                            <h3 class="subhead">Monthly Giving Amount</h3>
+                                            <div id="recurring-quick" class="grid quick-grid"><!-- filled by JS -->
+                                            </div>
+
+                                            <div class="field">
+                                                <input style="margin-top: 1rem;" id="custom-monthly" type="number"
+                                                    inputmode="decimal" placeholder="Custom monthly amount"
+                                                    class="input input-lg" />
+                                            </div>
+
+                                            <div class="note green">
+                                                <div class="note-head">
+                                                    <i data-lucide="repeat" class="icon green"></i>
+                                                    <span>Monthly Impact:</span>
+                                                </div>
+                                                <p id="recurring-annual">0 annually - Your consistent support provides
+                                                    sustainable
+                                                    ministry funding</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr class="separator" />
+
+                                    <!-- Memorial -->
+                                    <div class="memorial">
+                                        <label class="switch">
+                                            <input id="memorial-switch" type="checkbox" />
+                                            <span class="slider"></span>
+                                        </label>
+                                        <label for="memorial-switch" class="label-s">
+                                            This donation is in memory or honor of someone
+                                        </label>
+                                    </div>
+
+                                    <div class="field hidden" id="memorial-name-wrap">
+                                        <input id="memorial-name" type="text"
+                                            placeholder="Name of person being honored or remembered" class="input" />
+                                    </div>
+
+                                    <!-- Donor Info -->
+                                    <div class="grid two">
+                                        <div class="field">
+                                            <label for="donor-name" class="label-s">Full Name *</label>
+                                            <input id="donor-name" type="text" placeholder="Your full name"
+                                                class="input" required />
+                                        </div>
+                                        <div class="field">
+                                            <label for="donor-email" class="label-s">Email Address *</label>
+                                            <input id="donor-email" type="email" placeholder="your@email.com"
+                                                class="input" required />
+                                        </div>
+                                    </div>
+
+                                    <!-- Payment Methods -->
+                                    <h3 class="subhead">Choose Payment Method</h3>
+                                    <div id="payment-list" class="grid two gap-12"><!-- filled by JS --></div>
+
+                                    <!-- Payment Details (conditional) -->
+                                    <!-- Payment Details (conditional) -->
+                                    <div id="pm-card" class="pm card hidden blue-gray">
+                                        <h4 class="card-title">Secure Card Payment</h4>
+                                        <div class="vstack-8">
+                                            <input class="input h10" placeholder="Card Number" />
+                                            <div class="grid two gap-12">
+                                                <input class="input h10" placeholder="MM/YY" />
+                                                <input class="input h10" placeholder="CVC" />
+                                            </div>
+                                            <input class="input h10" placeholder="Cardholder Name" />
+                                        </div>
+                                    </div>
+
+                                    <div id="pm-paypal" class="pm card hidden blue">
+                                        <div class="center icon-xl"><i data-lucide="dollar-sign"></i></div>
+                                        <h4 class="card-title">PayPal Payment</h4>
+                                        <p class="muted xs mb2">Send to: paypal@revfranthony.org</p>
+                                        <p class="muted xs">Or click donate to be redirected to PayPal</p>
+                                    </div>
+
+                                    <div id="pm-paystack" class="pm card hidden emerald">
+                                        <div class="center icon-xl"><i data-lucide="credit-card"></i></div>
+                                        <h4 class="card-title">Pay with Paystack</h4>
+                                        <p class="muted xs mb2">Fast, secure online donations via Paystack</p>
+                                        <button id="paystack-btn" class="btn btn-primary full">Donate with
+                                            Paystack</button>
+                                    </div>
+
+
+                                    <div id="pm-cashapp" class="pm card hidden green">
+                                        <div class="center icon-xl"><i data-lucide="smartphone"></i></div>
+                                        <h4 class="card-title">Cash App Payment</h4>
+                                        <div class="chip"><code>$RevFrAnthony</code></div>
+                                        <p class="muted xs mt2">Open Cash App and search for this handle</p>
+                                    </div>
+
+                                    <div id="pm-bitcoin" class="pm card hidden orange">
+                                        <div class="center icon-xl"><i data-lucide="bitcoin"></i></div>
+                                        <h4 class="card-title">Bitcoin Wallet</h4>
+                                        <div class="chip wide">
+                                            <code class="break">bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh</code>
+                                        </div>
+                                        <p class="muted xs mt2">Scan QR or copy address to your wallet</p>
+                                    </div>
+
+                                    <div id="pm-zelle" class="pm card hidden purple">
+                                        <div class="center icon-xl"><i data-lucide="zap"></i></div>
+                                        <h4 class="card-title">Zelle Transfer</h4>
+                                        <div class="chip"><code>revfranthony@church.org</code></div>
+                                        <p class="muted xs mt2">Use this email in your banking app</p>
+                                    </div>
+
+                                    <div id="pm-venmo" class="pm card hidden blue">
+                                        <div class="center icon-xl"><i data-lucide="smartphone"></i></div>
+                                        <h4 class="card-title">Venmo Payment</h4>
+                                        <div class="chip"><code>@RevFrAnthony</code></div>
+                                        <p class="muted xs mt2">Search this handle in your Venmo app</p>
+                                    </div>
+
+                                    <div id="pm-bank" class="pm card hidden slate">
+                                        <h4 class="card-title">Wire Transfer Details</h4>
+                                        <div class="kv xs">
+                                            <div><span class="muted">Bank:</span><span>Community Trust Bank</span></div>
+                                            <div><span class="muted">Account:</span><span>Rev Fr Anthony Ministry</span>
+                                            </div>
+                                            <div><span class="muted">Account
+                                                    #:</span><span><code>****-****-7890</code></span></div>
+                                            <div><span class="muted">Routing:</span><span><code>021000021</code></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="pm-check" class="pm card hidden gray">
+                                        <h4 class="card-title">Mail Check/Money Order</h4>
+                                        <div class="vstack-4 xs">
+                                            <p class="b">Rev Fr Anthony Ministry</p>
+                                            <p>123 Faith Street</p>
+                                            <p>Hope City, HC 12345</p>
+                                        </div>
+                                        <p class="muted xs mt2">Make checks payable to "Rev Fr Anthony Ministry"</p>
+                                    </div>
+
+                                    <!-- Submit -->
+                                    <button id="donate-btn" class="btn btn-primary btn-xl full" type="submit" disabled>
+                                        <i data-lucide="heart" class="icon"></i>
+                                        <span id="donate-btn-text">Donate $0</span>
+                                    </button>
+
+                                    <div class="secure small center">
+                                        <i data-lucide="shield" class="icon-12"></i>
+                                        256-bit SSL encryption • Tax-deductible receipt • Cancel anytime
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- ✅ FORM END -->
+                    </div>
+                </section>
+
+            </div>
+        </section>
+
+        <div style="display: none;" id="sponsor-grid" class="grid sponsor-grid"><!-- filled by JS --></div>
+
+        <div style="display: none;" id="stories-grid" class="grid stories-grid"><!-- filled by JS --></div>
+
+        <div style="display: none;" id="testimonials-grid" class="grid testimonials-grid"><!-- filled by JS --></div>
+
+        <div style="display: none;" id="faq-list" class="vstack-12"><!-- filled by JS --></div>
+
+    </div>
+
+    <!-- Redesigned Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+
+            <!-- Column 1: About -->
+            <div class="footer-about">
+                <h3>Rev. Dr. Anthony O. Ezekwu</h3>
+                <p>Catholic Priest, Scholar & Mentor dedicated to faith, youth development, and global mission.</p>
+                <a href="./support.html" class="btn btn-donate"><i class="fas fa-heart"></i> Support This Mission</a>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#ministries">Ministries</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="./support.html">Support</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Info -->
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope"></i> toniezekwu@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +49 1521 6781286</p>
+                <p><i class="fas fa-map-marker-alt"></i> Germany</p>
+            </div>
+
+            <!-- Column 4: Social Media -->
+            <div class="footer-social">
+                <h4>Follow Me</h4>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@toniezekwu" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/chilavetok/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/AnthonyEzekwu" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Rev. Dr. Anthony Okechukwu Ezekwu. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="test22.js"></script>
+    <!-- <script src="test2.js"></script> -->
+    <!-- <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const paystackBtn = document.getElementById("paystack-btn");
+            if (paystackBtn) {
+                paystackBtn.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    const amount = isRecurring
+                        ? ((selectedAmount ?? Number(customAmountMonthly)) || 0)
+                        : ((selectedAmount ?? Number(customAmountOneTime)) || 0);
+
+                    let handler = PaystackPop.setup({
+                        key: 'pk_test_xxxxxxxxxxxxxxxxxx', // 🔑 replace with your Paystack public key
+                        email: donorEmail || "donor@example.com",
+                        amount: amount * 100, // Paystack uses kobo (₦5000 = 500000)
+                        currency: "NGN",
+                        ref: '' + Math.floor((Math.random() * 1000000000) + 1),
+                        onClose: function () {
+                            alert('Payment window closed.');
+                        },
+                        callback: function (response) {
+                            alert('Payment successful! Reference: ' + response.reference);
+                            // 🔗 You can verify this on your backend too
+                        }
+                    });
+                    handler.openIframe();
+                });
+            }
+        });
+    </script> -->
+
+</body>
+
+</html>

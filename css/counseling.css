@@ -1,0 +1,602 @@
+:root {
+    --bg: #f8f8f8;
+    --panel: #ffffff;
+    --text: #333333;
+    --muted: #555555;
+    --accent: #c9a34e;
+    --accent-2: #a9893e;
+    --radius: 12px;
+    --container: 1100px;
+    --shadow-1: 0 12px 36px rgba(0, 0, 0, 0.05);
+    --shadow-2: 0 6px 18px rgba(0, 0, 0, 0.04);
+    --ease: cubic-bezier(.2, .9, .32, 1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 80;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.nav {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* .logo-mark {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, var(--accent-2), var(--accent));
+    color: #fff;
+    font-weight: 700;
+} */
+
+.site-title {
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* nav links (mobile-first hidden) */
+.nav-links {
+    display: none;
+    gap: 18px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-weight: 700;
+    color: var(--muted);
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background .16s, color .16s;
+}
+
+.nav-links a:hover {
+    background: rgba(201, 163, 78, 0.1);
+    color: var(--accent-2);
+}
+
+/* hamburger */
+.hambtn {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    border: 0;
+    background: transparent;
+    display: inline-grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.bar {
+    width: 22px;
+    height: 2px;
+    background: var(--text);
+    position: relative;
+    display: block;
+    transition: transform .28s var(--ease);
+}
+
+.bar::before,
+.bar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--text);
+    transition: transform .28s var(--ease), opacity .18s;
+}
+
+.bar::before {
+    top: -7px;
+}
+
+.bar::after {
+    top: 7px;
+}
+
+.hambtn.open .bar {
+    transform: rotate(45deg);
+}
+
+.hambtn.open .bar::before {
+    transform: rotate(-90deg);
+    top: 0;
+}
+
+.hambtn.open .bar::after {
+    opacity: 0;
+    transform: translateX(6px);
+}
+
+/* off-canvas mobile panel */
+.panel-wrap {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 10000000;
+    pointer-events: none;
+}
+
+.panel-wrap .backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.42);
+    opacity: 0;
+    transition: opacity .28s;
+    pointer-events: none;
+}
+
+.panel {
+    width: 86%;
+    max-width: 340px;
+    height: 100%;
+    background: var(--panel);
+    transform: translateX(110%);
+    transition: transform .36s var(--ease);
+    box-shadow: -24px 40px 80px rgba(0, 0, 0, 0.12);
+    pointer-events: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-left: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.panel-wrap.open .backdrop {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.panel-wrap.open .panel {
+    transform: translateX(0);
+}
+
+.panel .close {
+    align-self: flex-end;
+    background: transparent;
+    border: 0;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.panel nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.panel nav a {
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-weight: 800;
+    color: var(--accent-2);
+}
+
+.panel .cta {
+    margin-top: auto;
+}
+
+/* container & layout */
+.wrap {
+    max-width: var(--container);
+    margin: 20px auto;
+    padding: 0 18px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: var(--muted);
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: var(--accent);
+}
+
+.back-link i {
+    color: var(--accent-2);
+}
+
+.hero {
+    display: grid;
+    gap: 14px;
+}
+
+.hero-card {
+    background: linear-gradient(180deg, #fff, #fbfbff);
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transform: translateY(8px);
+    opacity: 0;
+    transition: transform .45s var(--ease), opacity .45s;
+}
+
+.hero-card.inview {
+    transform: none;
+    opacity: 1;
+}
+
+.eyebrow {
+    font-weight: 700;
+    color: var(--muted);
+    font-size: 0.86rem;
+}
+
+.hero-title {
+    color: var(--accent-2);
+    font-size: 1.35rem;
+    margin: 0;
+}
+
+.hero-lead {
+    color: var(--muted);
+    margin: 0;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    border: 0;
+    transition: all 0.3s;
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(201, 163, 78, 0.12);
+}
+
+.btn.primary:hover {
+    background: var(--accent-2);
+}
+
+.btn.outline {
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+}
+
+.btn.outline:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* main layout: coaching + booking */
+.layout {
+    display: grid;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.coaching-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.coaching-card {
+    background: var(--panel);
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-2);
+    transition: transform .25s var(--ease), box-shadow .25s;
+    transform: translateY(8px);
+    opacity: 0;
+}
+
+.coaching-card.inview {
+    transform: none;
+    opacity: 1;
+}
+
+.coaching-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.coaching-card .icon {
+    font-size: 1.75rem;
+    margin-bottom: 12px;
+    color: var(--accent);
+}
+
+.coaching-card h3 {
+    margin: 0 0 8px;
+    color: var(--accent-2);
+}
+
+.coaching-card p {
+    color: var(--muted);
+    margin: 0;
+}
+
+.benefits {
+    max-width: 680px;
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(201, 163, 78, 0.03), rgba(201, 163, 78, 0.01));
+    box-shadow: var(--shadow-2);
+}
+
+.benefits h3 {
+    text-align: center;
+    margin: 0 0 12px;
+    color: var(--accent-2);
+}
+
+.benefits ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 8px;
+}
+
+.benefits li {
+    font-weight: 700;
+    color: var(--muted);
+}
+
+/* booking card (form) */
+.booking {
+    background: linear-gradient(180deg, #fff, #fcfcff);
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-1);
+    transform: translateY(12px);
+    opacity: 0;
+    transition: transform .45s var(--ease), opacity .45s;
+}
+
+.booking.inview {
+    transform: none;
+    opacity: 1;
+}
+
+.booking h2 {
+    margin: 0 0 6px;
+    color: var(--accent-2);
+    font-size: 1.1rem;
+}
+
+.meta {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 700;
+    color: var(--accent-2);
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    font-size: 0.95rem;
+    background: #fff;
+    transition: box-shadow .16s, border-color .16s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    border-color: var(--accent-2);
+    transform: translateY(-1px);
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    background: var(--accent);
+    color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    border: 0;
+    font-weight: 900;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: var(--accent-2);
+}
+
+.note {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-top: 10px;
+}
+
+/* small toast */
+.toast {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    bottom: 26px;
+    background: var(--accent-2);
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 200;
+    transition: opacity .18s, transform .18s;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+footer {
+    text-align: center;
+    color: var(--muted);
+    padding: 28px 0;
+    margin-top: 30px;
+}
+
+/* responsive */
+@media(min-width:920px) {
+    .nav-links {
+        display: flex;
+    }
+
+    .hambtn {
+        display: none;
+    }
+
+    .layout {
+        grid-template-columns: 1fr 420px;
+        align-items: start;
+    }
+
+    .coaching-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .booking {
+        position: sticky;
+        top: 92px;
+    }
+
+    .hero-card {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media(max-width:480px) {
+    .coaching-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.icon {
+    animation: float 3s ease-in-out infinite;
+}

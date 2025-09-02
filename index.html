@@ -3,270 +3,513 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./fontawesome-free-6.1.1-web/css/all.css">
+    <title>Rev. Dr. Anthony Okechukwu Ezekwu | Priest & Scholar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>MY PORTFOLIO</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="" alt="" class="logo">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">My Work</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <!-- <div class="logo-mark">AE</div> -->
+            <div class="logo">Rev. Dr. Anthony O. Ezekwu</div>
+            <!-- <div class="logo"></div> -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#ministries">Ministries</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </div>
+    </header>
 
-                </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p>Web developer</p>
-                <h1>Hi, i'm <span>Eze Ugochukwu</span> <br> from Nigeria</h1>
+    <!-- Hero Section -->
+    <section id="home" class="hero" required data-aos="fade-down" data-aos-deley="1000" data-aos-duration="2000">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Rev. Dr. Anthony Okechukwu Ezekwu</h1>
+                <p class="subtitle">Scholar • Mentor • Teacher • Coach • Counselor.
+                </p>
+                <blockquote>Welcome to the website of Rev. Dr. Anthony Okechukwu Ezekwu</blockquote>
+                <!-- <p>A Catholic priest of Enugu Diocese, Nigeria</p> -->
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary icon">Learn More</a>
+                    <a href="#contact" class="btn btn-outline icon">Contact Me</a>
+                    <a href="./counseling.html" class="btn btn-counseling icon">
+                        <i class="fas fa-calendar-check"></i> Book Counseling
+                    </a>
+                    <a href="./support.html" class="btn btn-donate icon">
+                        <i class="fas fa-heart"></i> Support My Mission
+                    </a>
+
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-
-    <!-- ABOUT -->
-    <div id="about">
+    <!-- About Section -->
+    <section id="about" class="section" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2000">
         <div class="container">
-            <div class="row">
-                <div class="col1">
-                    <img src="./img/dec pic2.jpg" alt="">
+            <h2 class="section-title">About</h2>
+            <div class="about-content">
+
+                <!-- Image -->
+                <div class="about-image" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2000">
+                    <img src="./images/IMG-20250618-WA0240.jpg" alt="Rev. Dr. Anthony Okechukwu Ezekwu">
                 </div>
-                <div class="col2">
-                    <h1>About Me</h1>
-                    <p>I'm Eze Ugochukwu, a skilled web developer proficient in HTML, CSS, JavaScript, PHP, and Python.
-                        With an eye for design and a knack for interactivity, I craft responsive, secure websites and
-                        applications. Let's collaborate and bring your digital vision to life!</p>
+
+                <!-- Text -->
+                <div class="about-text">
+                    <div class="text">
+                        <div class="expandable collapsed" id="expandableBio">
+                            <p>
+                                <strong>Rev. Dr. Anthony Okechukwu Ezekwu</strong> is a Catholic priest, scholar,
+                                writer,
+                                teacher, mentor,
+                                counselor, and an advocate of justice and peace. He has strong professional skills in
+                                philosophy,
+                                human management, leadership, research, public speaking, mentorship, counseling,
+                                writing,
+                                and storytelling.
+                            </p>
+
+                            <p>
+                                He is a passionate priest and Post-Doctoral researcher deeply committed to youth
+                                development
+                                and charity work.
+                                Through retreats and seminars, he inspires both youths and organizations with eloquent,
+                                story-filled talks.
+                                Dynamic and multi-talented, he has authored numerous books and articles including:
+                            </p>
+
+                            <ul>
+                                <li><em>Religion, Politics and Ethnic Games in Nigeria</em></li>
+                                <li><em>Transformed or Conformed</em></li>
+                                <li><em>The Hidden World of Autism</em></li>
+                                <li><em>Crisis of Morality Among Youths</em></li>
+                                <li><em>Dreaming in the Morning</em></li>
+                            </ul>
+
+                            <p>
+                                In addition, he has released two captivating musical albums that reflect his creativity
+                                and
+                                passion for art.
+                            </p>
+
+                            <p>
+                                Beyond his academic and pastoral engagements, he enjoys reading novels, sports, music,
+                                and
+                                travelling.
+                            </p>
+                        </div>
+
+                        <button class="toggle-button" onclick="toggleText('expandableBio', this)">
+                            <i class="fas fa-chevron-down"></i> See More
+                        </button>
+                    </div>
 
                     <div class="tab-titles">
-                        <div class="tab-links active-link" onclick="opentab('skills')">Skills</div>
-                        <div class="tab-links" onclick="opentab('experience')">Experience</div>
-                        <div class="tab-links" onclick="opentab('education')">Education</div>
+                        <div class="tab-links active-link" onclick="openTab('education')">Education</div>
+                        <div class="tab-links" onclick="openTab('experience')">Experience</div>
+                        <div class="tab-links" onclick="openTab('skills')">Skills</div>
                     </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>HTML, CSS & JavaScript <br></span>Proficient in creating the structure and layout
-                                of web pages using HTML5, Skilled in styling and designing websites with CSS3, including
-                                responsive design techniques, Strong proficiency in JavaScript for adding interactivity
-                                and dynamic functionality to websites.
-                            </li>
-                            <li><span>Back-End Development <br></span> Competence in building server-side logic,
-                                databases, and APIs for web applications.
-                            </li>
-                            <li><span>Database Management <br></span>Knowledge of SQL and NoSQL databases like MySQL,
-                                PostgreSQL, MongoDB, or Firebase.</li>
-                            <li><span>Debugging and Troubleshooting<br></span>Strong problem-solving skills for
-                                identifying and resolving web development issues.</li>
-                        </ul>
+
+                    <!-- Expandable lists -->
+                    <div class="tab-contents active-tab" id="education">
+                        <div class="expandable collapsed" id="expandableEducation">
+                            <ul>
+                                <li>2023 - present: Research Training on Autism.</li>
+                                <li>2020 - 2022: Doctorate Degree in Theology, JGU, Mainz Germany.</li>
+                                <li>2021: Protecting God’s Children, Online Certificate Course.</li>
+                                <li>2020: Masters Certificate in Ethics, JGU Mainz, Germany.</li>
+                                <li>2017: Language Course: B1, B2. in Klausenhof, Germany.</li>
+                                <li>2013 – 2014: Diploma Catholic Social Teaching, CUA, Washington.</li>
+                                <li>2001 – 2005: Bachelor’s degree in theology Bigard/Rome.</li>
+                                <li>2000 – 2004: Higher National Diploma (HND) in Journalism, Enugu.</li>
+                                <li>1996 – 2000: Bachelor’s degree in philosophy, Bigard/Rome.</li>
+                                <li>1995 – 1996: Spiritual Year formation, QAS Seminary, Imezi-Owa.</li>
+                                <li>1993 – 1994: Diploma Latin language St. John’s Seminary Nsukka</li>
+                                <li>1992 – 1993: St. John Cross Seminary, Nsukka.</li>
+                                <li>1988 – 1991: Comprehensive High School Udi/Abia, Nigeria.</li>
+                                <li>1986 – 1988: St. Thomas Secondary School, Kano.</li>
+                                <li>1979 – 1985: Kundila Primary School Kano, Nigeria.</li>
+                            </ul>
+                        </div>
+                        <button class="toggle-button" onclick="toggleText('expandableEducation', this)">
+                            <i class="fas fa-chevron-down"></i> See More
+                        </button>
                     </div>
+
                     <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>Web Developer | XYZ Web Solutions  August 2022 - Present <br></span>
-                                <ul>
-                                    <li>Developed customized websites for diverse clients using HTML, CSS, JavaScript, PHP,
-                                        and
-                                        Python.</li>
-                                    <li>Improved user engagement by creating responsive, visually appealing designs.
-                                    </li>
-                                    <li>Enhanced website functionality through API integrations and secure back-end
-                                        development.
-                                    </li>
-                                   
-                                </ul>
-                            </li>
-                            <li>
-                                <span>Junior Web Developer August 2022 - current<br></span>
-                                <ul>
-                                    <li>Assisted senior developers with Python, Django, and front-end development.</li>
-                                    <li>Contributed to database design, troubleshooting, and cross-functional collaboration.</li>
-                                </ul>
-                            </li>
-                            <li><span>Freelance Web Developer <br></span>
-                                <ul>
-                                    <li>Designed and developed personalized, responsive websites for small businesses.
-                                    </li>
-                                    <li>
-                                        Managed client relationships and delivered projects on time.
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <div class="expandable collapsed" id="expandableExperience">
+                            <ul>
+                                <li>2005: Ordained a Catholic Priest for the Diocese of Enugu, Nigeria.</li>
+                                <li>2005 – 2010: Parish Priest; St. Theresa’s Parish Achi, Awgu Diocese.</li>
+                                <li>2005 – 2010: Diocesan Vicar for Youths, Awgu Diocese.</li>
+                                <li>2006 – 2010: Secretary, Presbyterial Council, Awgu Diocese.</li>
+                                <li>2010 – 2012: Formator; St. Bernard Seminary, Enugu Diocese.</li>
+                                <li>2012 – 2013: Parish Priest; St. Jude & Simon Parish, Agu-Abor.</li>
+                                <li>2012 – 2015: Deputy Director; CIDJAP, Enugu.</li>
+                                <li>2012 – 2015: Chaplain; Holy Rosary College (HRC) Uwani, Enugu.</li>
+                                <li>2012 – 2015: Deanery Chaplain; CYWO, Enugu.</li>
+                                <li>2013 – 2015: Project Director, Ofu-Obi Africa Center, Enugu.</li>
+                                <li>2013 – 2015: Deputy Director/Chaplain; Olu Aka Di Nma, Enugu.</li>
+                                <li>2015 – 2016: Parish Priest, St. Theresa’s Parish, Idaw-River Enugu.</li>
+                                <li>2015 – 2017: President, Akama Oghe Priests and Religious, Enugu.</li>
+                                <li>2016 – 2017: Parish Priest; St. Patrick’s Parish, Amokwe Enugu.</li>
+                                <li>2016 – 2017: President; Amokwe Region in Udi deanery Enugu.</li>
+                                <li>2017 – 2022: Masters and Doctorate Degree in Ethics, Mainz.</li>
+                                <li>2023 – 2024: Fachkraft/Pädagogie Training, Germany.</li>
+                                <li>2024 – present: Research on Autism, Social Works, Germany</li>
+                            </ul>
+                        </div>
+                        <button class="toggle-button" onclick="toggleText('expandableExperience', this)">
+                            <i class="fas fa-chevron-down"></i> See More
+                        </button>
                     </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2022 - 2023 <br></span> Designing Web/App interfaces Training at APTECH</li>
-                            <li><span>2016 - 2022 <br></span> Schooled at Command Secondary School Abakaliki</li>
-                            <li><span>2012 - 2016 <br></span> Schooled at Hill View Nursery and Primary School
-                                Independence Layout Enugu</li>
-                        </ul>
+
+                    <div class="tab-contents" id="skills">
+                        <div class="expandable collapsed" id="expandableSkills">
+                            <ul>
+                                <li>Spiritual Director.</li>
+                                <li>Academic Researcher & tutor.</li>
+                                <li>Pastoral Researcher.</li>
+                                <li>Pastoral Counseling.</li>
+                                <li>Personal & professional coaching.</li>
+                                <li>Transformation coaching.</li>
+                                <li>Mentorship coaching.</li>
+                                <li>Business coaching.</li>
+                                <li>Guidance Coaching.</li>
+                                <li>Public Speaking.</li>
+
+                            </ul>
+                        </div>
+                        <button class="toggle-button" onclick="toggleText('expandableSkills', this)">
+                            <i class="fas fa-chevron-down"></i> See More
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- SERVICES -->
-    <div id="services">
+
+    <!-- Publications Section -->
+    <section id="publications" class="section" data-aos="fade-up" data-aos-duration="2000">
         <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div data-aos="fade-up" data-aos-deley="1000" data-aos-duration="2000">
-                    <i class="fas fa-code"></i>
-                    <h2>Website Development</h2>
-                    <p>Create custom websites from scratch, tailored to clients' unique needs and branding.</p>
-                    <!-- <a href="#">Learn More</a> -->
-                </div>
-                <div data-aos="fade-up" data-aos-deley="1000" data-aos-duration="2000">
-                    <i class="fa-brands fa-css3"></i>
-                    <h2>Front-End Development</h2>
-                    <p> Design and implement user-friendly interfaces using HTML, CSS, and JavaScript. Create
-                        professional portfolios for individuals or businesses to showcase their work and services.</p>
-                    <!-- <a href="#">Learn More</a> -->
-                </div>
-                <div data-aos="fade-up" data-aos-deley="1000" data-aos-duration="2000">
-                    <i class="fa-solid fa-code-pull-request"></i>
-                    <h2>Back-End Development</h2>
-                    <p>Build server-side applications, databases, and APIs using PHP, Python, or other backend
-                        technologies.</p>
-                    <!-- <a href="#">Learn More</a> -->
-                </div>
+            <h2 class="section-title">Publications</h2>
+            <p class="section-intro">
+                Rev. Dr. Anthony Okechukwu Ezekwu has authored numerous books and scholarly articles
+                that explore themes of morality, spirituality, philosophy, justice, and human
+                development. His works inspire faith, knowledge, and transformation, ranging from
+                theology to social ethics and practical reflections on life.
+            </p>
 
-            </div>
-            <div class="services-list">
-                <div data-aos="fade-up" data-aos-deley="1000" data-aos-duration="2000">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <h2>E-Commerce Solutions</h2>
-                    <p>Develop online stores with payment gateways, product catalogs, and secure transactions.</p>
-                    <!-- <a href="#">Learn More</a> -->
+            <div class="publications-grid">
+
+                <div class="publication-card">
+                    <h3>Books Published</h3>
+                    <p>Explore the collection of published books covering various aspects of theology, philosophy,
+                        and social justice.</p>
+                    <a href="./books.html" class="btn btn-primary">View Books</a>
                 </div>
-                <div data-aos="fade-up" data-aos-deley="1000" data-aos-duration="2000">
-                    <i class="fa-brands fa-searchengin"></i>
-                    <h2>SEO Optimization</h2>
-                    <p>Improve website visibility with on-page and off-page SEO techniques.</p>
-                    <!-- <a href="#">Learn More</a> -->
-                </div>
-                <div data-aos="fade-up" data-aos-deley="1000" data-aos-duration="2000">
-                    <i class="fab fa-app-store"></i>
-                    <h2>Web Hosting and Domain Setup</h2>
-                    <p>Assist clients in selecting suitable hosting and domain options, and set up their online
-                        presence.</p>
-                    <!-- <a href="#">Learn More</a> -->
+                <div class="publication-card">
+                    <h3>Papers & Articles</h3>
+                    <p>Academic papers and articles on research, philosophy, and theological studies.</p>
+                    <a href="./articles.html" class="btn btn-primary">View Papers</a>
                 </div>
 
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- PORTFOLIO -->
-    <div id="portfolio">
+
+    <!-- Ministries Section -->
+    <section id="ministries" class="section bg-light" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2000">
         <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="work-list">
-                <div class="work" data-aos="fade-up" data-aos-deley="1000" data-aos-duration="2000">
-                    <img src="./img/personal-portfolio-img/images/work-1.png" alt="">
-                    <div class="layer">
-                        <h3>A Drawing Board</h3>
-                        <p>A drawing board created with HTML, CSS and JavaScript.</p>
-                        <a href="https://canvas-drawing-board-rho.vercel.app"><i
-                                class="fas fa-external-link-alt"></i></a>
-                    </div>
+            <h2 class="section-title">Ministries & Programs</h2>
+            <div class="ministries-grid" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2000">
+                <div class="ministry-card">
+                    <i class="fas fa-hands-helping icon"></i>
+                    <h3>Community Outreach</h3>
+                    <p>Food distribution programs, shelter support for the less privileged, and business grants for
+                        widows
+                        and rural women.</p>
                 </div>
-                <div class="work" data-aos="fade-up" data-aos-deley="1000" data-aos-duration="2000">
-                    <img src="./img/personal-portfolio-img/images/work-2.png" alt="">
-                    <div class="layer">
-                        <h3>Social Web App</h3>
-                        <p>The app connects you to the talented people around the world. Download it from play store.
-                        </p>
-                        <a href=""><i class="fas fa-external-link-alt"></i></a>
-                    </div>
+
+                <div class="ministry-card">
+                    <i class="fas fa-bible icon"></i>
+                    <h3>Christian Fellowship</h3>
+                    <p>Daily Eucharistic celebration for all, fostering spiritual growth, spiritual counseling and Bible
+                        teaching.</p>
                 </div>
-                <div class="work" data-aos="fade-up" data-aos-deley="1000" data-aos-duration="2000">
-                    <img src="./img/personal-portfolio-img/images/work-3.png" alt="">
-                    <div class="layer">
-                        <h3>Online Shopping App</h3>
-                        <p>The app connects you to the talented people around the world. Download it from play store.
-                        </p>
-                        <a href="https://github.com/SpanixHugo/Social.git"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
+
+                <div class="ministry-card">
+                    <i class="fas fa-user-graduate icon"></i>
+                    <h3>Youth Empowerment</h3>
+                    <p>Scholarship programs, youth mentorship, training and leadership development for young adults.</p>
+                </div>
+
+                <div class="ministry-card">
+                    <i class="fas fa-heartbeat icon"></i>
+                    <h3>Health & Wellness/Coaching</h3>
+                    <p>Counseling services, health and physical education programs, life, career, business, spiritual
+                        and
+                        relationship coaching.</p>
                 </div>
             </div>
-            <a href="#" class="btn">See More</a>
+
+            <div class="application-container see-more-container">
+                <button id="openApplicationForm" class="btn btn-primary">Join Program</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== Modal Form ===== -->
+    <div id="applicationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 class="modal-title">Program Application Form</h3>
+            <form id="applicationForm">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="program">Select Program</label>
+                    <select id="program" name="program" required>
+                        <option value="">-- Choose a program --</option>
+                        <option value="Community Outreach">Community Outreach</option>
+                        <option value="Christian Fellowship">Christian Fellowship</option>
+                        <option value="Youth Empowerment">Youth Empowerment</option>
+                        <option value="Health & Wellness">Health & Wellness/Coaching</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message (Optional)</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Write a short note..."></textarea>
+                </div>
+
+                <input type="hidden" name="formType" value="Applications">
+
+                <button type="submit" class="btn submit-btn">Submit Application</button>
+            </form>
         </div>
     </div>
 
-    <!-- CONTACT -->
-    <div id="contact">
+    <section id="" class="section" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2000">
         <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-regular fa-envelope"></i><input class="email" type="text" readonly
-                            value="ezedaniel1223@gmail.com"></p>
-                    <p><i class="fas fa-phone-square-alt"></i> +234 704 254 4797 </p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/profile.php?id=61551099513477&mibextid=avESrC"><i
-                                class="fab fa-facebook"></i></a>
-                        <a href=" https://twitter.com/SpanixHugo?t=COOFlk3QMw3mJfzuwcsgYw&s=08 "><i
-                                class="fab fa-twitter-square"></i></a>
-                        <a href="https://www.instagram.com/spanix_hugo?r=nametag "><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/eze-daniel-646073255"><i class="fab fa-linkedin"></i></a>
-                        <!-- <a href=""><i class="fab fa-facebook"></i></a> -->
+            <!-- ADDED: Counseling Button Container in Ministries Section -->
+            <div class="counseling-container">
+                <h3>Need Personal Guidance?</h3>
+                <p>Book a one-on-one counseling session with Rev. Dr. Anthony Okechukwu Ezekwu</p>
+                <a href="./counseling.html" class="btn btn-counseling">
+                    <i class="fas fa-calendar-alt"></i> Schedule Counseling Session
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2000">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div id="gallery-grid" class="gallery-grid"></div>
+
+            <!-- Button to open modal -->
+            <div class="see-more-container">
+                <button id="openGalleryModal" class="btn">See Full Gallery</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for full gallery -->
+    <div id="galleryModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Full Gallery</h2>
+            <div id="gallery-modal-grid" class="gallery-grid"></div>
+        </div>
+    </div>
+
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Preview">
+    </div>
+
+
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Words of Wisdom</h2>
+                <p>Insights from recent sermons and teachings</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-quote">"Faith is not about having all the answers, but about trusting
+                                God even when we don't understand His plan."</p>
+                            <div class="testimonial-meta">— Sunday Service, December 2024</div>
+                        </div>
                     </div>
-                    <!-- <a href="img/7006585_EZE_SomtochukwuChinedu_C000175C_Letter_of_Offer.pdf" download="" class="btn btn2">Download CV</a> -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-quote">"In our darkest moments, God's light shines brightest. We must
+                                learn to be vessels of that light for others."</p>
+                            <div class="testimonial-meta">— Evening Prayer Meeting</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-quote">"True ministry happens not just from the pulpit, but in the
+                                quiet moments of listening and caring for one another."</p>
+                            <div class="testimonial-meta">— Pastoral Care Workshop</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-right">
-                    <form action="" name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required data-aos="fade-up"
-                            data-aos-deley="1000" data-aos-duration="2000">
-                        <input type="email" name="Email" placeholder="Your Email" required data-aos="fade-up"
-                            data-aos-deley="1000" data-aos-duration="2000">
-                        <textarea name="Message" rows="6" placeholder="Your message" data-aos="fade-up"
-                            data-aos-deley="1000" data-aos-duration="2000"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
+                <div class="testimonial-nav">
+                    <div class="testimonial-dot active"></div>
+                    <div class="testimonial-dot"></div>
+                    <div class="testimonial-dot"></div>
                 </div>
             </div>
         </div>
-        <div class="copyright">
-            <p>Copyright &copy; Eze Ugochukwu 2022. <i class="fas fa-heart"></i> All right reserverd</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light" required data-aos="fade-up" data-aos-deley="1000"
+        data-aos-duration="2000">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-container">
+                <div class="contact-info" required data-aos="fade-up" data-aos-deley="1000" data-aos-duration="2000">
+                    <h3>Get in Touch</h3>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>toniezekwu@gmail.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+4915216781286</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Germany</p>
+                    </div>
+
+                    <div class="social-links">
+                        <h3>Follow Me</h3>
+                        <div class="social-icons">
+                            <!-- <a href="#"><i class="fab fa-facebook-f"></i></a> -->
+                            <a href="https://www.youtube.com/@toniezekwu" target="_blank"><i
+                                    class="fab fa-youtube"></i></a>
+                            <a href="https://www.instagram.com/chilavetok/" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://x.com/AnthonyEzekwu" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" action="https://formsubmit.co/ezedaniel1223@gmail.com" method="POST" required
+                    data-aos="fade-up" data-aos-deley="1000" data-aos-duration="2000">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <input type="hidden" name="formType" value="Contacts">
+                    <input type="hidden" name="_next" value="https://spanixhugo.github.io/Rev-Dr-Anthony/">
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+
+            <!-- Column 1: About -->
+            <div class="footer-about">
+                <h3>Rev. Dr. Anthony O. Ezekwu</h3>
+                <p>Catholic Priest, Scholar & Mentor dedicated to faith, youth development, and global mission.</p>
+                <a href="./support.html" class="btn btn-donate"><i class="fas fa-heart"></i> Support This Mission</a>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#ministries">Ministries</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="./support.html">Support</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Info -->
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope"></i> toniezekwu@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +49 1521 6781286</p>
+                <p><i class="fas fa-map-marker-alt"></i> Germany</p>
+            </div>
+
+            <!-- Column 4: Social Media -->
+            <div class="footer-social">
+                <h4>Follow Me</h4>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@toniezekwu" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/chilavetok/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/AnthonyEzekwu" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Rev. Dr. Anthony Okechukwu Ezekwu. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init()
     </script>
-    <script src="./js/index.js"></script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbw3ourHecIaAXY1NNiIKu1JyWLLv7HEOyGaQN3eW0bB4DrsKbMY9V2pGO2y6I4DXsY/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "Message sent successfully"
-                    setTimeout(function () {
-                        msg.innerHTML = ""
-                    }, 5000)
-                    form.reset()
-                })
-                .catch(error => console.error('Error!', error.message))
-        })
-    </script>
+    <script src="./JS/index.js"></script>
 </body>
 
 </html>
